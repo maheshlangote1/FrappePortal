@@ -1,0 +1,98 @@
+{
+ "accept_payment": 1, 
+ "allow_comments": 0, 
+ "allow_delete": 0, 
+ "allow_edit": 1, 
+ "allow_incomplete": 0, 
+ "allow_multiple": 1, 
+ "allow_print": 1, 
+ "amount": 0.0, 
+ "amount_based_on_field": 1, 
+ "amount_field": "amount", 
+ "creation": "2018-01-13 12:59:00.423648", 
+ "doc_type": "Public Event Ticket", 
+ "docstatus": 0, 
+ "doctype": "Web Form", 
+ "idx": 0, 
+ "introduction_text": "", 
+ "is_standard": 1, 
+ "login_required": 1, 
+ "max_attachment_size": 0, 
+ "modified": "2018-01-13 18:42:19.495504", 
+ "modified_by": "Administrator", 
+ "module": "Events", 
+ "name": "buy-tickets", 
+ "owner": "Administrator", 
+ "payment_button_label": "Buy Now", 
+ "payment_gateway": "", 
+ "published": 1, 
+ "route": "buy-tickets", 
+ "show_sidebar": 1, 
+ "sidebar_items": [
+  {
+   "enabled": 0, 
+   "route": "/buy-tikets", 
+   "title": "My Tickets"
+  }, 
+  {
+   "enabled": 0, 
+   "route": "/events", 
+   "title": "All Events"
+  }
+ ], 
+ "success_url": "/buy-tickets", 
+ "title": "Buy Tickets", 
+ "web_form_fields": [
+  {
+   "fieldname": "public_event", 
+   "fieldtype": "Link", 
+   "hidden": 0, 
+   "label": "Public Event", 
+   "max_length": 0, 
+   "max_value": 0, 
+   "options": "Public Event", 
+   "read_only": 0, 
+   "reqd": 1
+  }, 
+  {
+   "fieldtype": "HTML", 
+   "hidden": 0, 
+   "max_length": 0, 
+   "max_value": 0, 
+   "options": "<div class=\"event-details\"></div>", 
+   "read_only": 0, 
+   "reqd": 0
+  }, 
+  {
+   "default": "", 
+   "fieldname": "rate", 
+   "fieldtype": "Int", 
+   "hidden": 0, 
+   "label": "Rate", 
+   "max_length": 0, 
+   "max_value": 0, 
+   "read_only": 1, 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "no_of_tickets", 
+   "fieldtype": "Int", 
+   "hidden": 0, 
+   "label": "No Of Tickets", 
+   "max_length": 0, 
+   "max_value": 0, 
+   "read_only": 0, 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "amount", 
+   "fieldtype": "Data", 
+   "hidden": 0, 
+   "label": "Amount", 
+   "max_length": 0, 
+   "max_value": 0, 
+   "read_only": 1, 
+   "reqd": 1
+  }
+ ]
+}

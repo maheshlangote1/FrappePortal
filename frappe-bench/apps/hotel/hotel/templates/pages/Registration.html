@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+</style>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+
+<h2>Registration Form</h2>
+<form ">
+
+		<div class="container">
+		<div class="row">
+			    <div class="col-sm-6"> <label><b>First Name</b></label>
+			    <input type="text" placeholder="First name" name="fname" required></div>
+			   <div class="col-sm-6"> <label><b>Last Name</b></label>
+			    <input type="text" placeholder="Last Name" name="lname" required></div>
+		</div>
+		<div class="row">	    
+			    <div class="col-sm-6"> <label><b>Email</b></label>
+			    <input type="text" placeholder="Email" name="email" required></div>
+			     <div class="col-sm-6"> <label><b>Mobile Number</b></label>
+			    <input type="text" placeholder="Mobile Number" name="mnumber" required></div>
+		
+		</div>
+		<div class="row">	    
+			    <div class="col-sm-6"> <label><b>Age</b></label>
+			    <input type="text" placeholder="age" name="age" required></div>
+			     <div class="col-sm-6"> <label><b>DOB</b></label>
+			    <input type="date" name="bday"></div>
+		
+		</div>
+		
+		
+		<div class="row">
+			    <div class="col-sm-6"> <label><b>User Name</b></label>
+			    <input type="text" placeholder="user name" name="uname" required></div>
+			   <div class="col-sm-6"> <label><b>Password Name</b></label>
+			    <input type="text" placeholder="Password" name="password" required></div>
+		</div>
+		<div class="row">
+			    <div class="col-sm-6"> <label><b>Address</b></label>
+			    <textarea rows="3" cols="30">
+				 
+				</textarea></div>
+			   <div class="col-sm-6"> <label><b>Password Name</b></label>
+			    <input type="text" placeholder="Password" name="password" required></div>
+		</div>
+		<div class="row">	    
+			    <div class="col-sm-6"> <label><b>Gender</b></label>
+			    <label class="radio-inline"><input type="radio" name="optradio" value="male">Male</label>
+				<label class="radio-inline"><input type="radio" name="optradio" value="Female">Female</label>
+				
+				</div>
+			     <div class="col-sm-6"> <label><b>Skills</b></label>
+			    <label class="checkbox-inline"><input type="checkbox" value="python">Python</label>
+				<label class="checkbox-inline"><input type="checkbox" value="java">Java</label>
+				<label class="checkbox-inline"><input type="checkbox" value="html">HTML</label>
+				<label class="checkbox-inline"><input type="checkbox" value="r">R</label>
+				<label class="checkbox-inline"><input type="checkbox" value="hadoop">Hadoop</label>
+				</div>
+		<div class="row">
+			    <div class="col-sm-6"> <label><b>Select Country</b></label>
+			    <select>
+			  <option value="India">India</option>
+			  <option value="US">US</option>
+			  <option value="UK">UK</option>
+			  <option value="Chaina">Chaina</option>
+			  <option value="Chaina">Pakistan</option>
+			  <option value="Chaina">france</option>
+			  <option value="Chaina">England</option>
+			</select></div>
+			   <div class="col-sm-6"> <label><b>Profile photo</b></label>
+			    <input type="file" placeholder="profile pics" name="pics" required></div>
+		</div>
+		<br><br>
+		<div class="row">	    
+			    <div class="col-sm-6"> <label><b>favourite color</b></label>
+			    <input type="color" placeholder="color" name="color" required></div>
+			     
+			    <input  type="submit" name="submit" value="SUBMIT">
+		
+		</div>		
+			
+		
+		</div>
+		</div>
+</form>
+</body>
+</html>

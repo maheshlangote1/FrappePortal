@@ -1,0 +1,1442 @@
+[DEBUG] 2018-01-11 14:18:21,709 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:19:22,089 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:20:22,417 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:21:22,703 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:22:22,976 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:23:23,239 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:24:23,933 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:25:24,239 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:26:24,462 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:27:24,717 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:28:25,027 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:29:25,295 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 14:30:01,449 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Sales Order\",\"name\":\"New Sales Order 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"hotel_name\":\"Naresh\",\"menu\":[{\"docstatus\":0,\"doctype\":\"Menu\",\"name\":\"New Menu 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Sales Order 2\",\"parentfield\":\"menu\",\"parenttype\":\"Sales Order\",\"idx\":1,\"__unedited\":false,\"item_name\":\"Order0001\",\"rate_per_unit\":100,\"quantity\":3}],\"address\":\"Karve nahar\",\"contact_number\":7875217474,\"email\":\"mahesh@gmail.com\",\"date\":\"2018-01-12\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 12, in savedocs
+    doc = frappe.get_doc(json.loads(doc))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 638, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 66, in get_doc
+    controller = get_controller(doctype)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/base_document.py", line 36, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/modules/utils.py", line 176, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/hotel/doctype/sales_order/sales_order.py", line 9, in <module>
+    class SalesOrder(Document):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/hotel/doctype/sales_order/sales_order.py", line 15, in SalesOrder
+    doc.total=total_weight
+NameError: name 'total_weight' is not defined
+[ERROR] 2018-01-11 14:30:01,759 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 14:30:01.453520-127.0.0.1-985
+[DEBUG] 2018-01-11 14:30:25,589 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:31:25,855 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:32:26,230 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:33:26,504 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:34:26,896 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:35:27,162 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:36:27,468 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:37:27,762 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:38:28,163 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:39:28,434 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 14:39:38,465 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Sales Order\",\"name\":\"New Sales Order 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"menu\":[{\"docstatus\":0,\"doctype\":\"Menu\",\"name\":\"New Menu 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Sales Order 2\",\"parentfield\":\"menu\",\"parenttype\":\"Sales Order\",\"idx\":1,\"__unedited\":false,\"item_name\":\"[item_name]0001\",\"rate_per_unit\":30,\"quantity\":2}],\"address\":\"sdfgh\",\"hotel_name\":\"cvbn\",\"contact_number\":78951,\"email\":\"asd@gmail.com\",\"date\":\"2018-01-25\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 12, in savedocs
+    doc = frappe.get_doc(json.loads(doc))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 638, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 66, in get_doc
+    controller = get_controller(doctype)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/base_document.py", line 36, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/modules/utils.py", line 178, in load_doctype_module
+    raise ImportError('Module import failed for {0} ({1})'.format(doctype, module_name + ' Error: ' + str(e)))
+ImportError: Module import failed for Sales Order (hotel.hotel.doctype.sales_order.sales_order Error: cannot import name flt)
+[ERROR] 2018-01-11 14:39:38,761 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 14:39:38.469071-127.0.0.1-ca5
+[DEBUG] 2018-01-11 14:40:28,699 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:41:28,960 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 14:42:09,028 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Sales Order\",\"name\":\"New Sales Order 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"menu\":[{\"docstatus\":0,\"doctype\":\"Menu\",\"name\":\"New Menu 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Sales Order 2\",\"parentfield\":\"menu\",\"parenttype\":\"Sales Order\",\"idx\":1,\"__unedited\":false,\"item_name\":\"[item_name]0001\",\"rate_per_unit\":30,\"quantity\":2}],\"address\":\"sdfgh\",\"hotel_name\":\"cvbn\",\"contact_number\":78951,\"email\":\"asd@gmail.com\",\"date\":\"2018-01-25\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 12, in savedocs
+    doc = frappe.get_doc(json.loads(doc))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 638, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 66, in get_doc
+    controller = get_controller(doctype)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/base_document.py", line 36, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/modules/utils.py", line 176, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/hotel/doctype/sales_order/sales_order.py", line 7
+    from frappe.utils
+                    ^
+SyntaxError: invalid syntax
+[ERROR] 2018-01-11 14:42:09,268 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 14:42:09.030710-127.0.0.1-368
+[DEBUG] 2018-01-11 14:42:29,393 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:43:29,667 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:44:29,992 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 14:44:57,984 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"contact_number\":78951,\"modified_by\":\"Administrator\",\"name\":\"Hotel0003\",\"parent\":null,\"menu\":[{\"total\":null,\"modified_by\":\"Administrator\",\"name\":\"Menu-0003\",\"parent\":\"Hotel0003\",\"item_name\":\"[item_name]0001\",\"creation\":\"2018-01-11 14:42:39.703169\",\"rate_per_unit\":30,\"modified\":\"2018-01-11 14:42:39.703169\",\"doctype\":\"Menu\",\"idx\":1,\"parenttype\":\"Sales Order\",\"owner\":\"Administrator\",\"docstatus\":0,\"quantity\":2,\"parentfield\":\"menu\"}],\"creation\":\"2018-01-11 14:42:39.703169\",\"modified\":\"2018-01-11 14:42:39.703169\",\"doctype\":\"Sales Order\",\"idx\":0,\"parenttype\":null,\"date\":\"2018-01-25\",\"address\":\"sdfgh\",\"owner\":\"Administrator\",\"docstatus\":0,\"total\":0,\"email\":\"asd@gmail.com\",\"hotel_name\":\"cvbn\",\"parentfield\":null,\"__last_sync_on\":\"2018-01-11T09:12:40.047Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 290, in _save
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1024, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1007, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 749, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+TypeError: validate() takes exactly 2 arguments (1 given)
+[ERROR] 2018-01-11 14:44:58,247 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 14:44:57.986986-127.0.0.1-86d
+[DEBUG] 2018-01-11 14:45:30,254 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 14:45:31,628 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"contact_number\":78951,\"modified_by\":\"Administrator\",\"name\":\"Hotel0003\",\"parent\":null,\"menu\":[{\"total\":null,\"modified_by\":\"Administrator\",\"name\":\"Menu-0003\",\"parent\":\"Hotel0003\",\"item_name\":\"[item_name]0001\",\"creation\":\"2018-01-11 14:42:39.703169\",\"rate_per_unit\":30,\"modified\":\"2018-01-11 14:42:39.703169\",\"doctype\":\"Menu\",\"idx\":1,\"parenttype\":\"Sales Order\",\"owner\":\"Administrator\",\"docstatus\":0,\"quantity\":2,\"parentfield\":\"menu\"}],\"creation\":\"2018-01-11 14:42:39.703169\",\"modified\":\"2018-01-11 14:42:39.703169\",\"doctype\":\"Sales Order\",\"idx\":0,\"parenttype\":null,\"date\":\"2018-01-25\",\"address\":\"sdfgh\",\"owner\":\"Administrator\",\"docstatus\":0,\"total\":0,\"email\":\"asd@gmail.com\",\"hotel_name\":\"cvbn\",\"parentfield\":null,\"__last_sync_on\":\"2018-01-11T09:12:40.047Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 290, in _save
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1024, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1007, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 749, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/hotel/doctype/sales_order/sales_order.py", line 13, in validate
+    for row in doc.sales_order :
+NameError: global name 'doc' is not defined
+[ERROR] 2018-01-11 14:45:31,865 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 14:45:31.632695-127.0.0.1-bb9
+[ERROR] 2018-01-11 14:46:17,008 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"contact_number\":78951,\"modified_by\":\"Administrator\",\"name\":\"Hotel0003\",\"parent\":null,\"menu\":[{\"total\":null,\"modified_by\":\"Administrator\",\"name\":\"Menu-0003\",\"parent\":\"Hotel0003\",\"item_name\":\"[item_name]0001\",\"creation\":\"2018-01-11 14:42:39.703169\",\"rate_per_unit\":30,\"modified\":\"2018-01-11 14:42:39.703169\",\"doctype\":\"Menu\",\"idx\":1,\"parenttype\":\"Sales Order\",\"owner\":\"Administrator\",\"docstatus\":0,\"quantity\":2,\"parentfield\":\"menu\"}],\"creation\":\"2018-01-11 14:42:39.703169\",\"modified\":\"2018-01-11 14:42:39.703169\",\"doctype\":\"Sales Order\",\"idx\":0,\"parenttype\":null,\"date\":\"2018-01-25\",\"address\":\"sdfgh\",\"owner\":\"Administrator\",\"docstatus\":0,\"total\":0,\"email\":\"asd@gmail.com\",\"hotel_name\":\"cvbn\",\"parentfield\":null,\"__last_sync_on\":\"2018-01-11T09:12:40.047Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 290, in _save
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1024, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1007, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 749, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/hotel/doctype/sales_order/sales_order.py", line 13, in validate
+    for row in Document.sales_order :
+AttributeError: 'SalesOrder' object has no attribute 'sales_order'
+[ERROR] 2018-01-11 14:46:17,283 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 14:46:17.011032-127.0.0.1-151
+[DEBUG] 2018-01-11 14:46:30,654 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 14:46:53,479 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"contact_number\":78951,\"modified_by\":\"Administrator\",\"name\":\"Hotel0003\",\"parent\":null,\"menu\":[{\"total\":null,\"modified_by\":\"Administrator\",\"name\":\"Menu-0003\",\"parent\":\"Hotel0003\",\"item_name\":\"[item_name]0001\",\"creation\":\"2018-01-11 14:42:39.703169\",\"rate_per_unit\":30,\"modified\":\"2018-01-11 14:42:39.703169\",\"doctype\":\"Menu\",\"idx\":1,\"parenttype\":\"Sales Order\",\"owner\":\"Administrator\",\"docstatus\":0,\"quantity\":2,\"parentfield\":\"menu\"}],\"creation\":\"2018-01-11 14:42:39.703169\",\"modified\":\"2018-01-11 14:42:39.703169\",\"doctype\":\"Sales Order\",\"idx\":0,\"parenttype\":null,\"date\":\"2018-01-25\",\"address\":\"sdfgh\",\"owner\":\"Administrator\",\"docstatus\":0,\"total\":0,\"email\":\"asd@gmail.com\",\"hotel_name\":\"cvbn\",\"parentfield\":null,\"__last_sync_on\":\"2018-01-11T09:12:40.047Z\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 290, in _save
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1024, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1007, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 749, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/hotel/doctype/sales_order/sales_order.py", line 13, in validate
+    for row in Document.SalesOrder :
+AttributeError: 'SalesOrder' object has no attribute 'SalesOrder'
+[ERROR] 2018-01-11 14:46:53,707 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 14:46:53.481905-127.0.0.1-e73
+[DEBUG] 2018-01-11 14:47:30,917 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:48:31,238 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:49:31,551 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:50:31,938 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:51:32,203 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:52:32,535 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:53:32,873 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:54:33,208 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:55:33,476 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:56:33,786 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:57:33,996 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:58:34,250 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 14:59:34,515 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:00:34,957 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:01:35,213 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:02:35,479 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:03:35,750 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:04:36,041 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:05:36,354 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:06:36,622 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:32:57,129 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:33:57,399 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:34:57,764 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:35:58,053 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:36:58,367 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:37:58,621 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:38:59,423 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:39:59,695 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:41:00,375 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:42:00,621 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 15:42:45,978 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Sales Order\",\"name\":\"New Sales Order 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"menu\":[{\"docstatus\":0,\"doctype\":\"Menu\",\"name\":\"New Menu 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Sales Order 1\",\"parentfield\":\"menu\",\"parenttype\":\"Sales Order\",\"idx\":1,\"__unedited\":false,\"item_name\":\"Order0001\",\"rate_per_unit\":50,\"quantity\":3}],\"address\":\"karve nagar\",\"hotel_name\":\"jay ganesh\",\"contact_number\":454}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 279, in _save
+    self.insert()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 218, in insert
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1021, in composer
+    hooks.append(frappe.get_attr(handler))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 919, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named sales_order
+[ERROR] 2018-01-11 15:42:46,199 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 15:42:45.979917-127.0.0.1-a74
+[DEBUG] 2018-01-11 15:43:00,861 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:44:01,122 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:45:01,375 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 15:45:03,276 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Sales Order\",\"name\":\"New Sales Order 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"menu\":[{\"docstatus\":0,\"doctype\":\"Menu\",\"name\":\"New Menu 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Sales Order 1\",\"parentfield\":\"menu\",\"parenttype\":\"Sales Order\",\"idx\":1,\"__unedited\":false,\"item_name\":\"Order0001\",\"rate_per_unit\":20,\"quantity\":5,\"discount\":10}],\"hotel_name\":\"Jay ganesh\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 279, in _save
+    self.insert()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 218, in insert
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1021, in composer
+    hooks.append(frappe.get_attr(handler))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 919, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named sales_order
+[ERROR] 2018-01-11 15:45:03,288 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 15:45:03.277812-127.0.0.1-992
+[DEBUG] 2018-01-11 15:46:01,625 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 15:46:13,371 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Sales Order\",\"name\":\"New Sales Order 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"menu\":[{\"docstatus\":0,\"doctype\":\"Menu\",\"name\":\"New Menu 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Sales Order 1\",\"parentfield\":\"menu\",\"parenttype\":\"Sales Order\",\"idx\":1,\"__unedited\":false,\"item_name\":\"Order0001\",\"rate_per_unit\":20,\"quantity\":5,\"discount\":10}],\"hotel_name\":\"Jay ganesh\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 279, in _save
+    self.insert()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 218, in insert
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1021, in composer
+    hooks.append(frappe.get_attr(handler))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 919, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named sales_order
+[ERROR] 2018-01-11 15:46:13,626 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 15:46:13.373535-127.0.0.1-38d
+[DEBUG] 2018-01-11 15:47:01,851 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 15:47:37,755 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Sales Order\",\"name\":\"New Sales Order 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"menu\":[{\"docstatus\":0,\"doctype\":\"Menu\",\"name\":\"New Menu 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Sales Order 1\",\"parentfield\":\"menu\",\"parenttype\":\"Sales Order\",\"idx\":1,\"__unedited\":false,\"item_name\":\"Order0001\",\"rate_per_unit\":20,\"quantity\":5,\"discount\":10}],\"hotel_name\":\"Jay ganesh\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 279, in _save
+    self.insert()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 218, in insert
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1021, in composer
+    hooks.append(frappe.get_attr(handler))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 919, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named sales_order
+[ERROR] 2018-01-11 15:47:37,963 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 15:47:37.756688-127.0.0.1-7b4
+[DEBUG] 2018-01-11 15:48:02,147 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:49:02,402 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 15:49:20,564 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Sales Order\",\"name\":\"New Sales Order 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"menu\":[{\"docstatus\":0,\"doctype\":\"Menu\",\"name\":\"New Menu 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Sales Order 1\",\"parentfield\":\"menu\",\"parenttype\":\"Sales Order\",\"idx\":1,\"__unedited\":false,\"item_name\":\"Order0001\",\"rate_per_unit\":20,\"quantity\":5,\"discount\":10}],\"hotel_name\":\"Jay ganesh\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 279, in _save
+    self.insert()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 218, in insert
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1021, in composer
+    hooks.append(frappe.get_attr(handler))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 919, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named sales_order
+[ERROR] 2018-01-11 15:49:20,860 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 15:49:20.567375-127.0.0.1-787
+[ERROR] 2018-01-11 15:49:56,955 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Sales Order\",\"name\":\"New Sales Order 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"hotel_name\":\"jay\",\"menu\":[{\"docstatus\":0,\"doctype\":\"Menu\",\"name\":\"New Menu 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Sales Order 1\",\"parentfield\":\"menu\",\"parenttype\":\"Sales Order\",\"idx\":1,\"__unedited\":false,\"item_name\":\"Order0001\",\"rate_per_unit\":20,\"quantity\":20,\"discount\":2}]}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 279, in _save
+    self.insert()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 218, in insert
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1021, in composer
+    hooks.append(frappe.get_attr(handler))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 919, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named sales_order
+[ERROR] 2018-01-11 15:49:57,189 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 15:49:56.961726-127.0.0.1-90a
+[DEBUG] 2018-01-11 15:50:02,668 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:51:02,932 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:52:03,203 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:53:03,474 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:54:03,735 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:55:04,003 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:56:04,303 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 15:57:04,558 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 15:57:45,034 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Sales Order\",\"name\":\"New Sales Order 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"hotel_name\":\"Jay ganesh\",\"menu\":[{\"docstatus\":0,\"doctype\":\"Menu\",\"name\":\"New Menu 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Sales Order 1\",\"parentfield\":\"menu\",\"parenttype\":\"Sales Order\",\"idx\":1,\"__unedited\":false,\"item_name\":\"Order0001\",\"rate_per_unit\":50,\"quantity\":60}],\"address\":\"viman nagar\",\"contact_number\":45}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 279, in _save
+    self.insert()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 218, in insert
+    self.run_before_save_methods()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 1021, in composer
+    hooks.append(frappe.get_attr(handler))
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 919, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named sales_order
+[ERROR] 2018-01-11 15:57:45,053 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 15:57:45.036370-127.0.0.1-2f0
+[DEBUG] 2018-01-11 15:58:04,819 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:03:27,821 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:04:28,151 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:05:28,407 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:06:28,766 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:07:29,012 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:08:29,323 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:09:29,548 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:10:30,030 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:11:30,380 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:12:30,686 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:13:31,181 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:14:31,441 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:15:31,699 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:16:32,015 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:17:32,462 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:18:32,725 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:19:32,992 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:20:33,328 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:21:33,656 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:22:33,889 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:23:34,156 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:24:34,495 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:25:38,521 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:26:38,869 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:27:39,095 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:28:39,540 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:29:39,812 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:30:40,169 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:31:40,465 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:32:40,736 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:33:40,979 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:34:41,357 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:35:41,575 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:36:41,840 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:37:42,066 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:38:42,316 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:39:42,702 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:40:43,009 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:41:43,275 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:42:43,521 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:43:43,749 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:44:44,067 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:45:44,387 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:46:44,645 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:47:44,915 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:48:45,345 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:49:45,576 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:50:45,815 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:51:46,079 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:52:46,648 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:53:46,926 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:54:47,166 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:55:47,949 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:56:48,232 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:57:48,472 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:58:48,706 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 16:59:48,950 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:00:49,349 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:01:49,573 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:02:49,821 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:03:50,187 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:04:50,466 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:05:50,734 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:06:50,990 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:07:51,373 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:08:51,696 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:09:52,902 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:10:53,166 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:11:53,627 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:12:53,999 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:13:54,321 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:14:54,661 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:15:54,891 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:16:55,214 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:17:55,477 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:18:55,711 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:19:56,110 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:20:56,423 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 17:21:57,932 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:23:37,943 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:24:38,624 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:25:40,164 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:26:40,427 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:27:40,784 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:28:41,091 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:29:41,345 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:30:41,598 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:31:41,876 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:32:42,133 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:33:42,415 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:34:42,634 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:35:42,992 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:36:43,257 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:37:43,681 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:38:43,918 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:39:44,138 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:40:44,404 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:41:45,062 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:42:45,332 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:43:45,538 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:44:45,779 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:45:46,117 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:46:46,354 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:47:46,600 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:48:46,881 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:49:47,102 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:50:47,337 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:51:47,552 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:52:47,807 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:53:48,079 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:54:48,308 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:55:48,539 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:56:48,798 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:57:49,299 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:58:49,504 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 18:59:49,889 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:00:50,211 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:01:50,477 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:02:50,693 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:03:50,910 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:04:51,181 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:05:51,382 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:06:51,705 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:07:51,920 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:08:52,225 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 19:08:55,512 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "cmd": "hotel.api.send_conformation_email", 
+ "hotel": "Hotel0005"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/api.py", line 4, in send_conformation_email
+    hotel = frappe.get_doc("Hotel",hotel)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 638, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 66, in get_doc
+    controller = get_controller(doctype)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/base_document.py", line 36, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/modules/utils.py", line 178, in load_doctype_module
+    raise ImportError('Module import failed for {0} ({1})'.format(doctype, module_name + ' Error: ' + str(e)))
+ImportError: Module import failed for Hotel (frappe.core.doctype.hotel.hotel Error: No module named hotel.hotel)
+[ERROR] 2018-01-11 19:08:55,902 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 19:08:55.543831-127.0.0.1-627
+[DEBUG] 2018-01-11 19:09:52,428 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:10:52,640 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 19:11:18,979 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "cmd": "hotel.api.send_conformation_email", 
+ "hotel": "Hotel0005"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/api.py", line 4, in send_conformation_email
+    hotel = frappe.get_doc("Hotel",hotel)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 638, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 66, in get_doc
+    controller = get_controller(doctype)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/base_document.py", line 36, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/modules/utils.py", line 178, in load_doctype_module
+    raise ImportError('Module import failed for {0} ({1})'.format(doctype, module_name + ' Error: ' + str(e)))
+ImportError: Module import failed for Hotel (frappe.core.doctype.hotel.hotel Error: No module named hotel.hotel)
+[ERROR] 2018-01-11 19:11:19,177 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 19:11:18.991129-127.0.0.1-144
+[DEBUG] 2018-01-11 19:11:52,856 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:12:53,112 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:13:53,344 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:14:53,654 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 19:14:58,876 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "cmd": "hotel.api.send_conformation_email", 
+ "hotel": "Hotel0005"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/api.py", line 4, in send_conformation_email
+    hotel = frappe.get_doc("Hotel",hotel)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 638, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/document.py", line 66, in get_doc
+    controller = get_controller(doctype)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/model/base_document.py", line 36, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/modules/utils.py", line 178, in load_doctype_module
+    raise ImportError('Module import failed for {0} ({1})'.format(doctype, module_name + ' Error: ' + str(e)))
+ImportError: Module import failed for Hotel (frappe.core.doctype.hotel.hotel Error: No module named hotel.hotel)
+[ERROR] 2018-01-11 19:14:59,101 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 19:14:58.877921-127.0.0.1-5fa
+[DEBUG] 2018-01-11 19:15:53,870 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:16:54,205 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:17:54,445 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:18:54,656 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:19:55,041 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:20:55,340 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:21:55,561 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:22:55,775 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:23:55,987 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:24:56,442 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:25:56,648 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:26:56,893 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:27:57,116 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:28:57,369 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:29:57,570 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:30:57,840 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:31:58,093 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 19:32:58,379 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 21:51:11,147 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 21:52:11,973 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 21:53:12,242 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 21:54:12,597 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 21:55:13,150 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 21:56:13,565 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 21:57:14,224 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 21:58:53,394 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 21:59:59,626 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:01:29,214 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:02:33,474 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:03:34,023 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:04:34,430 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:05:34,926 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:06:35,214 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:07:35,513 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:08:35,983 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:09:36,290 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:10:36,745 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:11:37,087 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:12:37,504 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:13:38,191 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:14:38,610 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:15:38,991 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:16:39,430 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:17:39,691 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:18:40,384 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:19:40,695 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:20:41,136 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:21:41,508 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:22:41,775 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:23:42,105 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:24:42,826 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:25:43,169 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[DEBUG] 2018-01-11 22:26:43,392 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 22:26:50,774 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "cmd": "hotel.api.send_conformation_email", 
+ "hotel": "Hotel0005"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/api.py", line 14, in send_conformation_email
+    recipients=[self.email],
+NameError: global name 'self' is not defined
+[ERROR] 2018-01-11 22:26:51,136 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-01-11 22:26:50.822305-127.0.0.1-e97
+[DEBUG] 2018-01-11 22:27:44,408 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: shopping
+Queued events for site shopping
+[ERROR] 2018-01-11 22:28:39,001 | /home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py:
+Site: shopping
+Form Dict: {
+ "cmd": "hotel.api.send_conformation_email", 
+ "hotel": "Hotel0005"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/digitalprizm/workspace/FrappeProject/frappe-bench/apps/hotel/hotel/api.py", line 13, in send_conformation_email
+    as_bulk=True
+TypeError: sendmail() got an unexpected keyword argument 'as_bulk'

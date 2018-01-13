@@ -1,0 +1,3 @@
+2017-12-15 11:51:46,347 INFO creating new app hotel
+2017-12-15 11:53:03,986 INFO installing hotel
+2017-12-15 11:53:03,987 INFO ./env/bin/pip install -q  -e ./apps/hotel --no-cache-dir

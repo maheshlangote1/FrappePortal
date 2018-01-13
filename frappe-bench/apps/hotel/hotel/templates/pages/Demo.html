@@ -1,0 +1,45 @@
+
+  <title>tabs demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+     $( "#tabs" ).tabs({
+         active: 3 ,
+         activate: function( event, ui ) {
+             var active = $( ".selector" ).tabs( "option", "active" );
+             console.log(active);
+             $('#active_tab').val(active.context.activeElement.id);
+         }
+     });
+     
+});
+
+</script>
+
+ 
+<div id="tabs">
+<ul>
+<li><a href="#tabs-1" id="1">Tab 1</a></li>
+<li><a href="#tabs-2" id="2">Tab 2</a></li>
+<li><a href="#tabs-3" id="3">Tab 3</a></li>
+</ul>
+  <div id="tabs-1">
+    <p>First tab is active by default:</p>
+    <pre><code>$( "#tabs" ).tabs(); </code></pre>
+  </div>
+  <div id="tabs-2">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  </div>
+  <div id="tabs-3">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  </div>
+</div>
+ 
+<script>
+$( "#tabs" ).tabs();
+</script>

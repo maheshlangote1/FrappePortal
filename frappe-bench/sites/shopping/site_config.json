@@ -1,0 +1,14 @@
+{
+ "db_name": "c651445273f6c41e", 
+ "db_password": "r4V5zilwmsEAGoLS", 
+ "developer_mode": 1, 
+ "encryption_key": "axahZYo19bPFwjGBPY2HxeqkvUCGvwgR6BbmSWJ-W1g=", 
+ "limits": {
+  "space_usage": {
+   "backup_size": 1.0, 
+   "database_size": 82.81, 
+   "files_size": 153.0, 
+   "total": 236.81
+  }
+ }
+}

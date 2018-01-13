@@ -1,0 +1,13 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="img-container">
+	<img src="{{ image }}">
+</div>
+<h1>{{ title }}<a class=" btn btn-sm btn-danger pull-right " href="/buy-tickets?new=1&public_event={{ name }}"> Book Now</a></h1>
+<div class="description"> {{ description }}</div>
+<div> {{ event_date}}</div>
+<div>{{ ticket_rate }}</div>
+{% endblock %}
+
+<!-- this is a sample default web page template -->
